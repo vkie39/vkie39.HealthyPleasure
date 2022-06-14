@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            /* border: 1px solid black;*/
+        }
+        body {
+            background-color: #333;
+            color: white;
+
+        }
+
+
+
+nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li.icon {
+  flex-basis: 25%;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  ;
+}
+
+a:hover {
+  background: whitesmoke;
+  color: #555555;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+        .container
+        {
+            max-width: 700px; /* 유튭에서 따왔어용 (max-이거)*/
+            margin: 0 auto;
+            box-sizing: border-box;
+            height:100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #size
+        {
+            font-size: 45px;
+            font-family: 'Tai Heritage Pro';
+        }
+        #size2
+        {
+            font-size: 40px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+        header>p
+        {
+            font-size: 1.5srem;
+            font-weight: 700;
+        }
+        header>ul
+        {
+            display: flex;
+        }
+        header>ul>li 
+        {
+            list-style-type: none;
+            margin-left: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        header>ul>li>a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding-bottom: 5px;
+            color: gray;
+        }
+
+        /* 코드 참조-웹사이트 창의 크기를 줄이면 위의 메뉴가 2줄로 나뉨 */
+        @media screen and (max-width: 500px) 
+        {
+         header {
+             flex-direction: column;
+         }   
+        }
+        /* 여기까지 */
+        section
+        {
+            padding: 0 3rem;
+            text-align: center;
+        }
+        section>p{
+            margin-bottom: 1rem;
+        }
+        section>p:first-child
+        {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        section>p:last-of-type
+        {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        section>a{
+            display: block;
+            border: 1px solid black;
+            width: 150px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: auto;
+            padding: 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            background-color: aliceblue;
+            color: black;
+        }
+        footer{
+            margin-bottom: 0rem;
+            font-size: 1rem;
+            color: gray;
+        }
+        footer>a{
+            text-decoration:none;
+            color: white;
+            font-family: 'Tai Heritage Pro';
+        }
+
+        footer>a:hover{
+            color: yellow;
+            background-color: #333;
+        }
+               
+
+          /*여기서부터는 참고한 소스 코드 입니다! */
+                /* 사진 슬라이드 */
+                @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+.slides input { display: none; }
+.slide-container { display: block; }
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+.slide:hover + .nav label { opacity: 0.5; }
+.nav label:hover { opacity: 1; }
+.nav .next { right: 0; }
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+input:checked + .slide-container .nav label { display: block; }
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4 {
+  background: rgba(0, 0, 0, 0.8);
+}
+    </style>
+</head>
+<body>
+    <div class="containcer">
+        <header>
+
+            <p id="size">&nbsp&nbsp Seo-Hyon</p>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./intro.html">introduce</a></li>
+                <li><a href="./howto.html">how to</a></li>
+                <li><a href="./stuff.html">stuff</a></li>
+                <li><a href="./thanks.html">thanks</a></li>
+            </ul>
+            <audio src="./health music.mp3" controls></audio>
+
+        </header>
+    </div>
+        <br><br><br><br>
+        <section>
+            <p id="size2">Healthy Pleasure</p>
+            <p></p>
+            <p>2022 트렌드 'Healthy Pleasure'. <br>
+            과연 그것이 무엇인지, 우리에게 어떤 영향을 미치는 지, 어떻게 이뤄갈 수 있을 지 
+            알아가보자. 
+            </p>
+<br>
+        <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%ED%97%AC%EC%94%A8%ED%94%8C%EB%A0%88%EC%A0%80" id="button">Learn more</a> <br><br>
+    </section>
+    <ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+        <div class="slide">
+          <img src="./yoga-2587066_1920.jpg" />
+            </div>
+        <div class="nav">
+          <label for="img-6" class="prev">&#x2039;</label>
+          <label for="img-2" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="./health(1).jpg" />
+            </div>
+        <div class="nav">
+          <label for="img-1" class="prev">&#x2039;</label>
+          <label for="img-3" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="./yoga(2).jpg" />
+            </div>
+        <div class="nav">
+          <label for="img-2" class="prev">&#x2039;</label>
+          <label for="img-4" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <li class="nav-dots">
+          <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+          <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+          <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+        </li>
+    </ul>
+    <br>
+
+
+        <footer>
+            <a href="https://www.instagram.com/vkie39.kr/">this template was made by @vkie</a>.
+        </footer>
+    </div>
+</body>
+</html>
