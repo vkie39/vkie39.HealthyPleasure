@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            /* border: 1px solid black;*/
+        }
+        body {
+            background-color: #333;
+            color: white;
+
+        }
+/* 여기부터 소스 코드 복사했어욤*/
+
+nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li.icon {
+  flex-basis: 25%;
+}
+
+
+
+a {
+  display: block;
+  text-align: center;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  ;
+}
+
+a:hover {
+  background: whitesmoke;
+  color: #555555;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* 여기까지 */
+
+        .container
+        {
+            max-width: 700px; /* 유튭에서 따왔어용 (max-이거)*/
+            margin: 0 auto;
+            box-sizing: border-box;
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #size
+        {
+            font-size: 25px;
+            font-family: 'Tai Heritage Pro';
+        }
+        #size2
+        {
+            font-size: 40px;
+        }
+        #size3
+        {
+            font-size: 60px;
+            font-family: 'Tai Heritage Pro';
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+        header>p
+        {
+            font-size: 1.5srem;
+            font-weight: 700;
+        }
+        header>ul
+        {
+            display: flex;
+        }
+        header>ul>li 
+        {
+            list-style-type: none;
+            margin-left: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        header>ul>li>a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding-bottom: 5px;
+            color: gray;
+        }
+        header>ul>li: first-child>a
+        {
+            border-bottom: 5px solid black;
+        }
+
+        /* 코드 참조-웹사이트 창의 크기를 줄이면 위의 메뉴가 2줄로 나뉨 */
+        @media screen and (max-width: 500px) 
+        {
+         header {
+             flex-direction: column;
+         }   
+        }
+        /* 여기까지 참조! */
+        section
+        {
+            padding: 0 3rem;
+            text-align: center;
+        }
+        section>p{
+            margin-bottom: 1rem;
+        }
+        section>p:first-child
+        {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        section>p:last-of-type
+        {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        section>a{
+            display: block;
+            border: 1px solid black;
+            width: 150px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: auto;
+            padding: 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            background-color: aliceblue;
+            color: black;
+        }
+        footer{
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: gray;
+        }
+        footer>a{
+            text-decoration: none;
+            color: white;
+            font-family: 'Tai Heritage Pro';
+        }
+        footer>a:hover{
+            color: yellow;
+            background-color: #333;
+        }
+        footer>input{
+            display:inline-block;
+            margin: 0 outo;
+            align: center;
+        }
+        #vkie
+        {
+            font-family: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="containcer">
+        <header>
+
+            <p id="size">&nbsp&nbsp Seo-Hyon</p>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./intro.html">introduce</a></li>
+                <li><a href="./howto.html">how to</a></li>
+                <li><a href="./stuff.html">stuff</a></li>
+                <li><a href="./thanks.html">thanks</a></li>
+               
+            </ul>
+        </header>
+    </div>
+
+        <br><br><br>
+        <section>
+            <p id="size2">Healthy Pleasure</p>
+            <p></p>
+            <p>2022 트렌드 'Healthy Pleasure'. <br>
+            읽어주셔서 감사합니다.'Healthy Pleasure'외에도 당신이 건강을 지킬 방법은 다양합니다. <br>
+            당신의 건강을 위해 일상 속 짧은 시간을 투자해 보는 건 어떨까요? 당신의 활력에<br> 
+            <p id="size3">cheers!!!</p><br>
+            </p>
+            <input type="image" src="./0c3b4af12efa355d17125e81b28087fe.jpg" style="width 300px" height="450px">
+<br><br><br>
+        <footer>
+            <a href="https://www.instagram.com/vkie39.kr/" href="vkie"> this template was made by @Vkie </a>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
